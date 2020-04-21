@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/socket.io.js"></script>
+    <script src="js/hapticGlove.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ 
+  </head>
+
+    <body>
+
+      
+
+      <img src="https://i.imgur.com/v0bksqp.jpg" alt="Smiley face" width="600" height="800">
+      <button id="button"  onclick="test_Glove_thum()" class="btn btn-primary" name="selectglove" value="Select Glove">Pulgar</button>
+      <button id="button1" onclick="test_Glove_index()" class="btn btn-primary" name="selectglove" value="Select Glove">Indice</button>
+      <button id="button2" onclick="test_Glove_middle()" class="btn btn-primary" name="selectglove" value="Select Glove">Medio</button>
+      <button id="button3" onclick="test_Glove_ring()" class="btn btn-primary" name="selectglove" value="Select Glove">Anular</button>
+      <button id="button4" onclick="test_Glove_pinky()" class="btn btn-primary" name="selectglove" value="Select Glove">Meñique</button>
+      <button type="submit" onclick="test_Glove()" class="btn btn-primary" name="selectglove" value="Select Glove">Test</button>
+      <div id="id01" class="w3-modal">
+        <div class="w3-modal-content">
+          <div class="w3-container">
+            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+            <p>Activando vibración</p>
+
+          </div>
+        </div>
+      </div>
+     <script type="text/javascript">
+      var socket = io("http://localhost:3000");
+      var hapticGlove = HapticGlove(socket);
+      function test_Glove(){
+        socket.emit('activationData'); 
+      }
+      function test_Glove_ring(){
+        socket.emit('activationRing'); 
+      }
+      function test_Glove_index(){
+        socket.emit('activationIndex'); 
+      }
+      function test_Glove_middle(){
+        socket.emit('activationMiddle'); 
+      }
+      function test_Glove_thum(){
+        socket.emit('activationThum'); 
+      }
+      function test_Glove_pinky(){
+        socket.emit('activationPinky'); 
+      }
+      socket.on('connect', function () {
+        console.log("Connected to socketIO");
+      });
+     </script>
+    </body>
+    <script src="js/hapticGlove.js"></script>
+    <script src="js/conceptTest.js"></script>
+    
+    
+</html>
+

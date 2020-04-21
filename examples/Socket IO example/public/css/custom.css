@@ -1,0 +1,85 @@
+#distance {
+    font-size: 16px;
+    font-weight: bold; 
+    margin-top: 10px; 
+}
+
+#element {
+    background: #000;
+    color: #fff;
+    height: 50px;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+}
+
+#button {
+  background-color: #00d999; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: absolute;
+  left: 60px;
+  top: 320px;
+}
+#button1 {
+  background-color: #00d999; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: absolute;
+  left: 70px;
+  top: 90px;
+}
+#button2 {
+  background-color: #00d999; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: absolute;
+  left: 300px;
+  top: 70px;
+
+}
+#button3 {
+  background-color: #00d999; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: absolute;
+  left: 420px;
+  top: 140px;
+
+}
+#button4 {
+  background-color: #00d999; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: absolute;
+  left: 500px;
+  top: 220px;
+}
+
